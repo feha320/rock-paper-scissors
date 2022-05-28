@@ -2,29 +2,34 @@ const rock = "Stein";
 const paper = "Papier";
 const scissors = "Schere";
 
-function computerChoice () {
+let playerWin = 0;
+let computerWin = 0;
+let unentschieden = 0;
+
+function computerChoice() {
+  let compChoice;
   randomChoice = Math.floor(Math.random() * 3) + 1;
   if (randomChoice == 1) {
-    computerChoice = rock;
+    compChoice = rock;
   } else if (randomChoice == 2) {
-    computerChoice = paper;
+    compChoice = paper;
   } else if (randomChoice == 3) {
-    computerChoice = scissors;
+    compChoice = scissors;
   }
-  return computerChoice;
+  return compChoice;
 }
 
 function playerChoice() {
-  let choice
+  let plChoice;
   input = prompt("1 für Schere, 2 für Stein, 3 für Papier")
   if (input == "1") {
-    choice = scissors;
+    plChoice = scissors;
   } else if (input == 2) {
-    choice = rock;
+    plChoice = rock;
   } else if (input == 3) {
-    choice = paper;
+    plChoice = paper;
   }
-  return choice;
+  return plChoice;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -32,24 +37,44 @@ function playRound(playerSelection, computerSelection) {
   console.log("Computer: " + computerSelection);
   if (playerSelection == rock && computerSelection == paper) {
     console.log("Du verlierst!");
+    computerWin += 1;
   } else if (playerSelection == rock && computerSelection == scissors) {
     console.log("Du gewinnst!");
+    playerWin += 1;
   } else if (playerSelection == paper && computerSelection == rock) {
     console.log("Du gewinnst!");
+    playerWin += 1;
   } else if (playerSelection == paper && computerSelection == scissors) {
     console.log("Du verlierst!");
-  }  else if (playerSelection == scissors && computerSelection == paper) {
+    computerWin += 1;
+  } else if (playerSelection == scissors && computerSelection == paper) {
     console.log("Du gewinnst!");
+    playerWin += 1;
   } else if (playerSelection == scissors && computerSelection == rock) {
     console.log("Du verlierst!");
+    computerWin += 1;
   } else if (playerSelection == computerSelection) {
     console.log("Unentschieden!");
+    unentschieden += 1;
   }
+  console.log("---------------------");
 }
 
+function game() {
+  let rounds = parseInt(prompt("Wieviele Runden möchtest du spielen?"));
+  console.log("Okay, wir spielen " + rounds + " Runden!");
+  console.log("---------------------");
+  for (i = 1; i <= rounds; i++) {
+    playRound(playerChoice(), computerChoice());
+  }
+  console.log("---------------------");
+  console.log(playerWin + " mal gewonnen");
+  console.log(computerWin + " mal verloren");
+  console.log(unentschieden + " mal unentschieden");
+  console.log("---------------------");
+}
 
-playRound(playerChoice(), computerChoice());
-
+game();
 
 
 
