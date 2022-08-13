@@ -19,22 +19,52 @@ function computerChoice() {
   return compChoice;
 }
 
-function playerChoice() {
-  let plChoice;
-  input = prompt("1 für Schere, 2 für Stein, 3 für Papier")
-  if (input == "1") {
-    plChoice = scissors;
-  } else if (input == 2) {
-    plChoice = rock;
-  } else if (input == 3) {
-    plChoice = paper;
-  }
-  return plChoice;
-}
+const btnScissors = document.querySelector("#scissors")
+btnScissors.addEventListener("click", () => {
+  playerChoice = scissors;
+  console.log(playerChoice);
+})
+
+const btnRock = document.querySelector("#rock")
+btnRock.addEventListener("click", () => {
+  playerChoice = rock;
+  console.log(playerChoice);
+})
+
+const btnPaper = document.querySelector("#paper")
+btnPaper.addEventListener("click", () => {
+  playerChoice = paper;
+  console.log(playerChoice);
+})
+
+// function playerChoice() {
+//   let plChoice;
+//   input = prompt("1 für Schere, 2 für Stein, 3 für Papier")
+//   if (input == "1") {
+//     plChoice = scissors;
+//   } else if (input == 2) {
+//     plChoice = rock;
+//   } else if (input == 3) {
+//     plChoice = paper;
+//   }
+//   return plChoice;
+// }
+
+const roundsDetail = document.querySelector("#roundsDetail");
 
 function playRound(playerSelection, computerSelection) {
   console.log("Spieler: " + playerSelection);
+
+  //  const roundsDetail = document.querySelector("#roundsDetail");
+
+  // const playSel = document.createElement("p");
+  // playSel.classList.add("playSel");
+  // playSel.textContent = playerSelection;
+  // roundsDetail.appendChild(playSel);
+
   console.log("Computer: " + computerSelection);
+
+
   if (playerSelection == rock && computerSelection == paper) {
     console.log("Du verlierst!");
     computerWin += 1;
@@ -61,9 +91,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-  let rounds = parseInt(prompt("Wieviele Runden möchtest du spielen?"));
+  let rounds = 5;
+  //   let rounds = parseInt(prompt("Wieviele Runden möchtest du spielen?"));
   console.log("Okay, wir spielen " + rounds + " Runden!");
   console.log("---------------------");
+
+  const playSel = document.createElement("p");
+  playSel.classList.add("playSel");
+  playSel.textContent = playerSelection;
+  roundsDetail.appendChild(playSel);
+
+
   for (i = 1; i <= rounds; i++) {
     playRound(playerChoice(), computerChoice());
   }
