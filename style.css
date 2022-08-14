@@ -96,7 +96,8 @@ svg {
 /* General styling */
 
 body {
-
+  font-family: var(--ff-primary);
+  
 }
 
 
