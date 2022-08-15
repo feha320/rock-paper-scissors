@@ -1,10 +1,10 @@
 :root {
   /* colors */
-  --clr-primary-300: hsl(0, 0, 0);
-  --clr-primary-400: hsl(206, 47, 9);
-  --clr-primary-500: hsl(216, 41, 18);
-  --clr-primary-600: hsl(208, 31, 28);
-  --clr-primary-700: hsl(249, 21, 83);
+  --clr-primary-300: hsl(0, 0%, 0%);
+  --clr-primary-400: hsl(206, 47%, 9%);
+  --clr-primary-500: hsl(216, 41%, 18%);
+  --clr-primary-600: hsl(208, 31%, 28%);
+  --clr-primary-700: hsl(249, 21%, 83%);
 
   /* font */
   --ff-primary: "Josefin Sans", sans-serif;
@@ -97,7 +97,31 @@ svg {
 
 body {
   font-family: var(--ff-primary);
-  
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--clr-primary-700);
+}
+
+.nav-list {
+  border: 2px solid green;
+  display: flex;  
+  gap: 2rem;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
 }
 
 
