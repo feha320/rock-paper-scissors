@@ -108,12 +108,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 10px;
   background-color: var(--clr-primary-700);
 }
 
 .nav-list {
-  border: 2px solid green;
   display: flex;  
   gap: 2rem;
 }
@@ -123,6 +122,28 @@ h1 {
   justify-content: center;
   padding: 10px 0px;
 }
+
+h2 {
+  display: flex;
+  justify-content: center;
+
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0 80px 0;
+}
+
+.btn-rps {
+  width: 120px;
+  height: 60px;
+}
+
+#computer-choice {
+  padding-left: 100px;
+}
+
 
 
 /* Utility classes */
