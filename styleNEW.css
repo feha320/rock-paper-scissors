@@ -104,6 +104,18 @@ body {
   margin-inline: auto;
 }
 
+.game-container-1 {
+  border: 2px solid red;
+  max-width: 800px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.game-container-2 {
+  border: 2px solid green;
+}
+
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -131,8 +143,10 @@ h2 {
 
 .btn-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   padding: 30px 0 80px 0;
+  gap: 30px;
 }
 
 .btn-rps {

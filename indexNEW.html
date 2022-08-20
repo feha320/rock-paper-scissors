@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleNEW.css">
   <script src="script.js" defer></script>
 </head>
 
@@ -30,32 +30,27 @@
   <div class="container">
     <h1 class="fw-bold fs-700">Schere-Stein-Papier</h1>
   </div>
-
-  <div class="container">
-    <h2 class="fw-medium fs-500">Wähle deine Waffe:</h2>
-    <div class="btn-wrapper fw-bold fs-400">
-      <button class="btn-rps" id="scissors">SCHERE</button>
-      <button class="btn-rps" id="rock">STEIN</button>
-      <button class="btn-rps" id="paper">PAPIER</button>
-    </div>
-    <div class="computer-choice-container fw-medium fs-500">
-      <p>Gegner wählt: </p>
-      <p id="computer-choice" class="fw-bold"></p>
-    </div>
-    <div class="points fw-bold fs-500">
-      <h4 id="round"></h4>
-      <h3>Punkestand: </h3>
-      <p>
-        <span id="yourPoints">0</span> zu
-        <span id="computerPoints">0</span>
-      </p>
+  <div class="game-container-1">
+    <div class="game-container-2">
+      <h2 class="fw-medium fs-500">Wähle deine Waffe:</h2>
+      <div class="btn-wrapper fw-bold fs-400">
+        <button class="btn-rps" id="scissors">SCHERE</button>
+        <button class="btn-rps" id="rock">STEIN</button>
+        <button class="btn-rps" id="paper">PAPIER</button>
+      </div>
+      <div class="game-container-2">
+        <div class="computer-choice-container fw-medium fs-500">
+          <p>Gegner wählt: </p>
+          <p id="computer-choice" class="fw-bold"></p>
+        </div>
+        <div class="points fw-bold fs-500">
+          <h4 id="round"></h4>
+          <h3>Punkestand: </h3>
+          <p>
+            <span id="yourPoints">0</span> zu
+            <span id="computerPoints">0</span>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
-
-
-
-
-
-</body>
-
-</html>
